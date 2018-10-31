@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>sign in form</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="signinstyle.css">
+<link rel="stylesheet" type="text/css" href="homestyle.css">
+
+</head>
+<body>
+<ul>
+
+  <li><a class="active" href="house.html"><font size="4"><img src="icon1.png" width="40" height="40">Dreem House</a></li>
+   <div style="float:right";><li><a href="loginform.html"><img src="login.png" width="35" height="35">Login</a></li>
+   <li><a href="signinform.html"><img src="login.png" width="35" height="35">Sign up</a></li>
+    <li><a href="image gallery.html"><img src="login.png" width="35" height="35">Image Gallery</a></li>
+  <li><a href="about.html"><img src="about.png" width="35" height="35">About</a></li></div>
+</ul>
+<img src="green.jpg" width="1349" height="1150">
+<form  action="house.html" onsubmit="return validate()" style="border:1px solid #ccc">
+<div class="login-box">
+<img src="HCDAC-login-icon.png" class="avatar">
+<h1>sign in Here</h1>
+<p>First name</p>
+<input type="text" name="First name" id="fname" placeholder="enter first name">
+<p>Last name</p>
+<input type="text" name="Last name" id="lname" placeholder="enter last name">
+<p>User name</p>
+<input type="text" name="User name" id="uname" placeholder="enter user name">
+<p>Password</p>
+<input type="password" name="Password" id="Password1" placeholder="enter password">
+<p>Re-enter-Password</p>
+<input type="password" name="Password" id="Password2" placeholder="enter password">
+<p>Mail id</p>
+<input type="email" name="email" id="emailid" placeholder="enter email id">
+<p>Address</p>
+<input type="Text" name="address" id="add" placeholder="enter address">
+<p>Mobile no</p>
+<input type="Number" name="mobile no" id="mob" placeholder="enter mobile">
+ <input type="submit"  value="submit">                    
+ <a href="a">Forget Password</a>
+</form>
+<script type="text/javascript">
+	function validate()
+	{
+	var fname=document.getElementById("fname").value;
+	var lname=document.getElementById("lname").value;
+	var uname=document.getElementById("uname").value;
+	var Password1=document.getElementById("Password1").value;
+	var Password2=document.getElementById("Password2").value;
+	var emailid=document.getElementById("emailid").value;
+	var add=document.getElementById("add").value;
+	var mob=document.getElementById("mob").value;
+	var emailreg= /^[a-zA-Z0-9._-]+@[[a-zA-Z0-9._-]+\.[a-zA-Z]{2,6}$/;
+	var n=Password1.localeCompare(Password2);
+	if(fname!="" && lname!="" && uname!=""  && Password1!="" && Password2!="" && emailid!="" && add!="" && mob!="")
+	{
+	  if(emailid.match(emailreg))
+	  {
+	    if(n==0)
+	    {
+		    if(mob.length==10)
+			 {
+			 alert('all entered values are valid form successfull validated');
+			 }
+			 else
+			 {
+			 alert('enter mobile no of 10 digits');
+			 return false;
+			 }
+	    }
+        else
+	    {
+		alert('Incorrect password');
+		//document.getElementById('Password1').value="";
+		//document.getElementById("Password2").value="";
+        return false;
+	    }
+	}
+	else
+	   {
+	    alert('enter a valid email');
+		return false;
+	   }
+	}
+	
+	else
+	   {
+	alert('please fill the form');
+	return false;
+	   }
+
+	}	
+</script>
+</body
+</html>

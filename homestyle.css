@@ -1,0 +1,56 @@
+<style>
+h1
+{
+margin: 0;
+padding: 2px 0 1px;
+text-align: center;
+font-size: 22px;
+}
+.panel
+{
+width: 330px;
+height: px;
+border-radius: 20px;
+background: rgba(0, 0, 0, 0.5);
+color: #fff;
+top: 70%;
+left: 15%;
+position: absolute;
+transform: translate(-50%,-50%);
+box-sizing: border-box;
+padding: 70px 30px;
+}
+
+ul {
+    
+    border-radius: 6px;
+    list-style-type: none;  
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    
+    font-weight: bold;
+    font-style: oblique;
+    text-align: center;
+    display: block;
+    color: white;
+    padding: 3px 10px;
+    text-decoration: none;
+}
+li a:hover{
+  background-color: #666;
+}
+
+li.active{
+    
+    background-color: #444;
+}
+</style>
